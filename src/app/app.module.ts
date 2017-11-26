@@ -1,3 +1,4 @@
+import { MessagesService } from './messages.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
@@ -19,6 +20,7 @@ import { ReversePipe } from './reverse.pipe';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import lcoaleDECH from '@angular/common/locales/de';
+import { ReceiverComponent } from './receiver/receiver.component';
 registerLocaleData(lcoaleDECH);
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ registerLocaleData(lcoaleDECH);
     ChildComponent,
     ColorDirective,
     PipesComponent,
-    ReversePipe
+    ReversePipe,
+    ReceiverComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ registerLocaleData(lcoaleDECH);
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "de" }],
+  providers: [{ provide: LOCALE_ID, useValue: "de" },MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

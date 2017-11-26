@@ -1,3 +1,4 @@
+import { ReceiverComponent } from './receiver/receiver.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'reactive-form', component: ReactiveFormComponent },
   { path: 'item/:id', component: DetailComponent },
   { path: 'item', component: ItemsComponent },
-  { path: 'pipes', component: PipesComponent }
+  { path: 'pipes', component: PipesComponent },
+  { path: 'receiver', component: ReceiverComponent }
 ];
 
 @NgModule({
